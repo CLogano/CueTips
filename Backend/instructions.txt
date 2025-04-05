@@ -1,0 +1,10 @@
+pip install -r requirements.txt
+
+
+for node
+--> npm install
+
+to create package.json
+--> npm init -y
+then
+--> npm install axios dotenv canvas
