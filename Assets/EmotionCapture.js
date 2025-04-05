@@ -8,8 +8,9 @@ let cameraTextureProvider;
 
 
 
-//@input string openAIKey = ""
-//@input int interval = 10000 {"hint":"Milliseconds between frame uploads"}
+
+//@input int interval = 5000
+//@input string backendUrl = "https://2982-50-168-180-218.ngrok-free.app/analyze"
 //@input Component.Text responseText
 
 let lastSentTime = 0;
@@ -22,7 +23,6 @@ script.createEvent('OnStartEvent').bind(() => {
   cameraRequest.cameraId = CameraModule.CameraId.Default_Color;
 
   cameraTexture = cameraModule.requestCamera(cameraRequest);
-  print("📷 Camera texture requested");
   cameraTextureProvider = cameraTexture.control;
 
   cameraTextureProvider.onNewFrame.add((cameraFrame) => {
@@ -35,7 +35,7 @@ script.createEvent('OnStartEvent').bind(() => {
     Base64.encodeTextureAsync(
             cameraTexture,
             (base64Image) => {
-              sendToOpenAI(base64Image);
+              sendImageToBackend(base64Image);
             },
             () => {
                 print("❌ Failed to encode image");
@@ -45,6 +45,46 @@ script.createEvent('OnStartEvent').bind(() => {
     );
   });
 });
+
+async function sendImageToBackend(base64Image) {
+
+  try {
+    const request = new Request(script.backendUrl, {
+      method: 'POST',
+      body: JSON.stringify({
+        image: base64Image
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    const response = await remoteServiceModule.fetch(request);
+
+    if (response.status === 200) {
+      const responseText = await response.text();
+      print('✅ Backend response: ' + responseText);
+
+      if (script.responseText) {
+        const trimmed = responseText.trim();
+        if (trimmed && trimmed !== "none") {
+          script.responseText.text = trimmed;
+          script.responseText.enabled = true;
+        } else {
+          script.responseText.text = "";
+          script.responseText.enabled = false;
+          print("ℹ️ No emotion or 'none' detected — disabling response text.");
+        }
+      }
+    } else {
+      const errorText = await response.text();
+      print('❌ Backend error: ' + errorText);
+    }
+
+  } catch (error) {
+    print('❌ Network error: ' + error);
+  }
+}
 
 async function sendToOpenAI(base64Image) {
   const prompt = 'Describe this face in **one word**: happy, sad, angry, surprised, etc. If you cannot detect a face or come up with an emotion, simply put "None".'

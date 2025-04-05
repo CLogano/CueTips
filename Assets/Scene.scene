@@ -4,6 +4,7 @@
     - !<own> 00000000-0000-0065-0000-000000000064
     - !<own> 0005641c-028d-459a-0000-000000014b4d
     - !<own> 346c74fb-f3b4-4270-adba-b7d8684bfbc8
+    - !<own> 4a264eea-d860-4f05-82f2-8fd2a9ae8e18
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -24,7 +25,7 @@
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
-    []
+    - !<own> 4e21cd87-9ab2-4f8a-9e98-be99814c5041
   Components:
     - !<own> 00000000-0000-0065-0000-000000000065
 - !<Camera/00000000-0000-0065-0000-000000000065>
@@ -201,13 +202,27 @@
     hasSegmentScaleCompensation: false
   Children:
     - !<own> 1ff8a55c-e4c0-4285-b40d-614e6226b999
-    - !<own> 688d8c3d-ee8e-47f4-87d1-50b0a842321e
   Components:
     []
-- !<SceneObject/688d8c3d-ee8e-47f4-87d1-50b0a842321e>
+- !<SceneObject/4a264eea-d860-4f05-82f2-8fd2a9ae8e18>
   PrefabRemaps:
     []
-  Name: ImageText
+  Name: Image
+  Enabled: false
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 32.000000, y: 32.000000, z: 32.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 63854eb9-3a71-4bba-8f25-c2d361365e6f
+- !<SceneObject/4e21cd87-9ab2-4f8a-9e98-be99814c5041>
+  PrefabRemaps:
+    []
+  Name: Effects
   Enabled: true
   Layers: 1
   LocalTransform:
@@ -216,28 +231,25 @@
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
-    []
+    - !<own> 519acd37-4d54-434c-8019-28454e04c0ad
   Components:
-    - !<own> 960b8b8f-039f-4537-bbc1-23ac11550887
-- !<ScriptComponent/94e4aab0-bd7a-48d7-9042-77fb455fbf52>
+    []
+- !<SceneObject/519acd37-4d54-434c-8019-28454e04c0ad>
   PrefabRemaps:
     []
-  Name: EmotionCapture
+  Name: Head Binding
   Enabled: true
-  ScriptAsset: !<reference> 8124b490-891c-4192-907a-d01ea0d4d454
-  ScriptInputsDefault:
-    openAIKey: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      openAIKey: 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
-      interval: 6000
-      responseText: !<reference.Text> 960b8b8f-039f-4537-bbc1-23ac11550887
-  ScriptTypes:
-    "":
-      {}
-- !<Text/960b8b8f-039f-4537-bbc1-23ac11550887>
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> c88e372a-5fbc-4235-a892-9384aa5f3329
+  Components:
+    - !<own> 662af7fb-4782-413b-bc21-c4986158a4a8
+- !<Text/53893949-b3e6-4dae-b249-5ee1ef93e124>
   PrefabRemaps:
     []
   Name: Text
@@ -249,12 +261,12 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Text
+  Text: ""
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 48
+  FontSize: 150
   Font: !<reference> 00000000-0000-0000-0000-000000000000
   LayoutRect:
     left: -7.500000
@@ -313,3 +325,72 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
+- !<Image/63854eb9-3a71-4bba-8f25-c2d361365e6f>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Fit
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> ea195d73-f4b8-470c-9a56-816618c34b73
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<Head/662af7fb-4782-413b-bc21-c4986158a4a8>
+  PrefabRemaps:
+    []
+  Name: Head Binding
+  Enabled: true
+  AttachmentPointType: CandideCenter
+  FaceIndex: 0
+  AttachedBarycentricVertex:
+    indices:
+      - 0
+      - 0
+      - 0
+    weights:
+      - 0.000000
+      - 0.000000
+      - 0.000000
+  TrackingScope: !<reference> 00000000-0000-0000-0000-000000000000
+- !<ScriptComponent/94e4aab0-bd7a-48d7-9042-77fb455fbf52>
+  PrefabRemaps:
+    []
+  Name: EmotionCapture
+  Enabled: true
+  ScriptAsset: !<reference> 8124b490-891c-4192-907a-d01ea0d4d454
+  ScriptInputsDefault:
+    interval: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      interval: 2000
+      backendUrl: "https://2982-50-168-180-218.ngrok-free.app/analyze"
+      responseText: !<reference.Text> 53893949-b3e6-4dae-b249-5ee1ef93e124
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/c88e372a-5fbc-4235-a892-9384aa5f3329>
+  PrefabRemaps:
+    []
+  Name: EmotionText
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: -0.010000, y: 14.546150, z: -2.722271}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 53893949-b3e6-4dae-b249-5ee1ef93e124
