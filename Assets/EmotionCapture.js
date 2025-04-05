@@ -8,7 +8,7 @@ let cameraTextureProvider;
 
 
 
-//@input string openAIKey = "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"
+//@input string openAIKey = ""
 //@input int interval = 10000 {"hint":"Milliseconds between frame uploads"}
 //@input Component.Text responseText
 
