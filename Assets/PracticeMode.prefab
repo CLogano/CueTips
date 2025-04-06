@@ -4,21 +4,6 @@
     - !<own> cbd094b8-1c30-483a-9116-2a0968577014
   LazyLoading: true
   RetainAssets: true
-- !<SceneObject/0e7850bf-a34b-4371-ace9-95e489606f22>
-  PrefabRemaps:
-    []
-  Name: Practice
-  Enabled: false
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> ae194e64-2789-49e4-be68-ead9fa6bcb48
 - !<ScriptComponent/0fb1bef0-5deb-466d-b4b1-988ef32a9537>
   PrefabRemaps:
     []
@@ -293,7 +278,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -17.500000, y: 10.000000, z: -60.000000}
+    position: {x: -10.000000, y: 10.000000, z: -60.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.250000, y: 1.250000, z: 1.250000}
     hasSegmentScaleCompensation: false
@@ -358,28 +343,6 @@
   Components:
     - !<own> 52209bea-544f-4ecf-87e0-c7b67754adf4
     - !<own> 5e20babc-c891-44d9-94fd-d38546ab83de
-- !<ScriptComponent/ae194e64-2789-49e4-be68-ead9fa6bcb48>
-  PrefabRemaps:
-    []
-  Name: Practice
-  Enabled: true
-  ScriptAsset: !<reference> 78316db5-4f38-4214-8e69-05b252589b79
-  ScriptInputsDefault:
-    optionsContainer: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      text: !<reference.Text> 382339fe-04d1-4f60-9dac-7e317c4ecc77
-      option1: !<reference.Text> eb2ed7b8-556a-4d26-9711-7ad47ae1abe1
-      option2: !<reference.Text> 279ee7ea-904c-4f3d-87dd-c32453af1206
-      option3: !<reference.Text> d925841d-57a4-4368-b381-47162f87f73c
-      option4: !<reference.Text> 224a9d73-313e-4f5a-886d-4067830e2195
-      titleText: !<reference.Text> 04bad7ef-f306-4375-8dc9-4881759f64bb
-      optionsContainer: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-  ScriptTypes:
-    "":
-      {}
 - !<ScriptComponent/c75e99dc-adb8-4761-a779-6921dcd3f2e5>
   PrefabRemaps:
     []
@@ -414,7 +377,6 @@
     hasSegmentScaleCompensation: false
   Children:
     - !<own> 69790ec3-bf59-4be7-8b55-25debf05096b
-    - !<own> 0e7850bf-a34b-4371-ace9-95e489606f22
   Components:
     - !<own> 0fb1bef0-5deb-466d-b4b1-988ef32a9537
     - !<own> 268ba5b3-e984-4768-bb02-f1e907cc2631
