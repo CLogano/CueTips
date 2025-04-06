@@ -616,25 +616,6 @@
   ScriptTypes:
     "":
       {}
-- !<Image/c3eee35e-4def-40a2-a2ef-6cfc645aacf4>
-  PrefabRemaps:
-    []
-  Name: Image
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Fit
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 58c5662c-42f3-4c07-816e-bce0a7499875
-  FlipX: false
-  FlipY: false
-  RotationAngle: 0
-  Pivot: {x: 0.000000, y: 0.000000}
-  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<Text/c5239777-9c9a-4aa2-aa54-1f8ce1d5c19e>
   PrefabRemaps:
     []
@@ -711,6 +692,25 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
+- !<Image/c70a2a0b-2ede-4b98-9ffc-d13b08012a0e>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Fit
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 0bce9438-f0cb-4371-82bb-4492a03eb61b
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/cca4a3eb-724d-412b-96f0-f6d5a17f2222>
   PrefabRemaps:
     []
@@ -725,7 +725,7 @@
   Children:
     []
   Components:
-    - !<own> c3eee35e-4def-40a2-a2ef-6cfc645aacf4
+    - !<own> c70a2a0b-2ede-4b98-9ffc-d13b08012a0e
 - !<ColliderComponent/d522e1c8-c5a0-41da-8d7d-9a3baae839b0>
   PrefabRemaps:
     []

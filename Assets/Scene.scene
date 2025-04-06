@@ -239,6 +239,7 @@
     - 4c9b1886-0fcc-4bcd-ac1a-6fd7067b8afb: 5cc89a99-caa4-46c8-aaeb-9fa63c6f9fef
     - 539f5ff3-950a-489b-9c73-54e5cf9b9403: a0e1884b-d09b-4d89-960e-8fe96c52eeed
     - 55d1998d-34a0-4751-821b-769cffe6a5a7: 6b2bdd3c-106e-4846-a1be-6f44c3e6d841
+    - 58d5cb23-fe32-45c9-b02c-f8929dfd90d6: c70a2a0b-2ede-4b98-9ffc-d13b08012a0e
     - 6320d820-1aba-4f25-bced-732b9617d2cc: 48502fa2-6e1c-4e63-839f-f01f2eacd555
     - 64879b2c-6dbc-4ac4-9995-6f0658320e8e: ab97abdd-d26f-4f4d-afb6-760b91707556
     - 65cb4a86-37c6-4fe4-8e0a-18e6f2954fed: 810fd07b-9c22-47c3-9ec5-9e6e919f09b6
@@ -1477,7 +1478,7 @@
   Children:
     []
   Components:
-    - !<own> cbaa26c3-d05f-44e9-9e89-5707e0e52f3f
+    - !<own> 58d5cb23-fe32-45c9-b02c-f8929dfd90d6
 - !<SceneObject/340aecfb-f119-46c6-a5d4-6ec61457147f>
   PrefabRemaps:
     []
@@ -2312,6 +2313,25 @@
     - !<own> 677776ca-36f8-4701-a3c4-9ff6d3a2a089
   Components:
     []
+- !<Image/58d5cb23-fe32-45c9-b02c-f8929dfd90d6>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Fit
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 0bce9438-f0cb-4371-82bb-4492a03eb61b
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/59175d6b-b4ea-47db-a842-53f03560e157>
   PrefabRemaps:
     []
@@ -4300,25 +4320,6 @@
   ScriptTypes:
     "":
       {}
-- !<Image/cbaa26c3-d05f-44e9-9e89-5707e0e52f3f>
-  PrefabRemaps:
-    []
-  Name: Image
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Fit
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 58c5662c-42f3-4c07-816e-bce0a7499875
-  FlipX: false
-  FlipY: false
-  RotationAngle: 0
-  Pivot: {x: 0.000000, y: 0.000000}
-  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<ScriptComponent/cc2bc37c-4ec5-4682-988b-aa7a093d38ea>
   PrefabRemaps:
     []
