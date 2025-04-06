@@ -3582,13 +3582,12 @@
   Enabled: true
   ScriptAsset: !<reference> 8124b490-891c-4192-907a-d01ea0d4d454
   ScriptInputsDefault:
-    interval: true
     openAIKey: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      interval: 2000
+      interval: 500
       backendUrl: "https://d2ba-50-168-180-218.ngrok-free.app/analyze"
       responseText: !<reference.Text> 53893949-b3e6-4dae-b249-5ee1ef93e124
       openAIKey: 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
