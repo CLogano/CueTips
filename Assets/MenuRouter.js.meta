@@ -1,0 +1,41 @@
+- !<AssetImportMetadata/952b875f-528d-40e6-88e4-4b7eff34adaa>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 6665e3cb-ad99-43d9-8c47-3928cdc8104c
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 6665e3cb-ad99-43d9-8c47-3928cdc8104c
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> d2131221-e01e-447d-b8db-489dd7490ddb
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/d2131221-e01e-447d-b8db-489dd7490ddb>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 9099148f-7521-46b7-bd83-30f3814858f8
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    liveAssistButtonScript: false
+    practiceButtonScript: false
+    transitionDelay: false
+  ScriptTypesHidden:
+    {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - practiceButtonScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      liveAssistButtonScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      transitionDelay: 0.200000
+  ScriptTypes:
+    -
+      {}

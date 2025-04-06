@@ -26,10 +26,10 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    backendURL: false
-    intervalMs: false
-    textLabel: false
-    uiImage: false
+    backendUrl: false
+    interval: false
+    openAIKey: false
+    responseText: false
   ScriptTypesHidden:
     {}
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
@@ -40,6 +40,12 @@
       uiImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
       intervalMs: 2000
       textLabel: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      interval: 2000
+      renderCamera: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      renderTarget: !<reference.RenderTarget> 00000000-0000-0000-0000-000000000000
+      openAIKey: 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
+      responseText: !<RequiredType.Text> 00000000-0000-0000-0000-000000000000
+      backendUrl: ""
   ScriptTypes:
     -
       {}

@@ -1,0 +1,18 @@
+- !<AssetImportMetadata/21cdaf72-66eb-4d9c-bebf-ea7a70df194c>
+  ImportedAssetIds:
+    Scene Manager/Helper/EventModule: !<reference> c2e4732c-c32b-4850-ac61-218d32c74bea
+    Scene Manager/Scene Manager/Scene Manager: !<reference> 151b8075-3884-4904-9e55-1d15e70c0fcd
+    Scene Manager/SceneManagerModule: !<reference> ee583ce9-2538-4b11-a6cf-2b3b6f995c8c
+  ImporterName: LensCoreImporter
+  PrimaryAsset: !<reference> 151b8075-3884-4904-9e55-1d15e70c0fcd
+  PackageType: LegacyPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<LensCoreImporterSettings>
+    PersistentIdGenerationAlgorithm: DescriptorBased
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000

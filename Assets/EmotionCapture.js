@@ -1,62 +1,209 @@
+// // Send datastream to backend
+// var remoteServiceModule = require('LensStudio:RemoteServiceModule');
+// // Capture live stream footage
+// let cameraModule = require('LensStudio:CameraModule');
+// let cameraRequest;
+// let cameraTexture;
+// let cameraTextureProvider;
+
+
+
+
+// //@input int interval = 5000
+// //@input string backendUrl = "https://2982-50-168-180-218.ngrok-free.app/analyze"
+// //@input Component.Text responseText
+
+// let lastSentTime = 0;
+
+// script.createEvent('OnStartEvent').bind(() => {
+    
+//   print("🚀 Script started");
+
+//   if (script.responseText) {
+//     script.responseText.enabled = true;
+// }
+    
+//   cameraRequest = CameraModule.createCameraRequest();
+//   cameraRequest.cameraId = CameraModule.CameraId.Default_Color;
+
+//   cameraTexture = cameraModule.requestCamera(cameraRequest);
+//   cameraTextureProvider = cameraTexture.control;
+
+//   cameraTextureProvider.onNewFrame.add((cameraFrame) => {
+
+//     let now = getTime() * 1000;
+//     if (now - lastSentTime < script.interval) return; 
+
+//     lastSentTime = now;
+        
+//     Base64.encodeTextureAsync(
+//             cameraTexture,
+//             (base64Image) => {
+//               //sendImageToBackend(base64Image);
+//             },
+//             () => {
+//                 print("❌ Failed to encode image");
+//             },
+//             CompressionQuality.HighQuality,
+//             EncodingType.Jpg
+//     );
+//   });
+// });
+
+// async function sendImageToBackend(base64Image) {
+
+//   try {
+//     const request = new Request(script.backendUrl, {
+//       method: 'POST',
+//       body: JSON.stringify({
+//         image: base64Image
+//       }),
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//     });
+
+//     const response = await remoteServiceModule.fetch(request);
+
+//     if (response.status === 200) {
+//       const responseText = await response.text();
+//       print('✅ Backend response: ' + responseText);
+
+//       if (script.responseText) {
+//         const trimmed = responseText.trim();
+//         if (trimmed && trimmed !== "none") {
+//           script.responseText.text = trimmed;
+//           script.responseText.enabled = true;
+//         } else {
+//           script.responseText.text = "";
+//           script.responseText.enabled = false;
+//           print("ℹ️ No emotion or 'none' detected — disabling response text.");
+//         }
+//       }
+//     } else {
+//       const errorText = await response.text();
+//       print('❌ Backend error: ' + errorText);
+//     }
+
+//   } catch (error) {
+//     print('❌ Network error: ' + error);
+//   }
+// }
+
+// // Disable binding and text on unload
+// script.preUnloadHook = function () {
+//   return new Promise((resolve) => {
+//       print("📦 Unloading LiveAssist scene");
+
+//       if (script.responseText) {
+//           script.responseText.enabled = false;
+//       }
+
+//       resolve();
+//   });
+// };
+
 // Send datastream to backend
-const remoteModule = require('LensStudio:RemoteMediaModule');
+var remoteServiceModule = require('LensStudio:RemoteServiceModule');
+
 // Capture live stream footage
 let cameraModule = require('LensStudio:CameraModule');
 let cameraRequest;
 let cameraTexture;
 let cameraTextureProvider;
 
-//@input Component.Image uiImage {"hint":"The image in the scene that will be showing the captured frame."}
-//@input string backendURL = "https://your-backend.com/analyze" {"hint":"Backend URL for emotion analysis"}
-//@input int intervalMs = 2000 {"hint":"Milliseconds between frame uploads"}
-//@input SceneObject textLabel {"hint":"Text label to display returned emotion (optional)"}
+//@input int interval = 5000
+//@input string backendUrl = "https://d2ba-50-168-180-218.ngrok-free.app/analyze"
+//@input Component.Text responseText
+//@input string openAIKey
 
 let lastSentTime = 0;
+let lastDetectedEmotion = ""; // Store the last valid emotion
 
 script.createEvent('OnStartEvent').bind(() => {
-    
-  print("🚀 Script started");
-    
-  cameraRequest = CameraModule.createCameraRequest();
-  cameraRequest.cameraId = CameraModule.CameraId.Default_Color;
+    print("🚀 Script started");
 
-  cameraTexture = cameraModule.requestCamera(cameraRequest);
-  print("📷 Camera texture requested");
-  cameraTextureProvider = cameraTexture.control;
+    cameraRequest = CameraModule.createCameraRequest();
+    cameraRequest.cameraId = CameraModule.CameraId.Default_Color;
 
-  cameraTextureProvider.onNewFrame.add((cameraFrame) => {
+    cameraTexture = cameraModule.requestCamera(cameraRequest);
+    cameraTextureProvider = cameraTexture.control;
 
-    let now = getTime() * 1000;
-        if (now - lastSentTime < script.intervalMs) return;
+    // Initialize responseText to be hidden until first emotion is detected
+    if (script.responseText) {
+        script.responseText.text = "";
+        script.responseText.enabled = false;
+    }
+
+    cameraTextureProvider.onNewFrame.add((cameraFrame) => {
+        let now = getTime() * 1000;
+        if (now - lastSentTime < script.interval) return;
 
         lastSentTime = now;
 
-        // Convert frame to JPEG
-        cameraFrame.getData({ format: cameraModule.ImageFormat.JPEG }, function(jpegData) {
-            if (!jpegData) {
-                print("❌ Failed to get JPEG from frame");
-                return;
-            }
-
-            sendFrameToBackend(jpegData);
-        });
-  });
+        Base64.encodeTextureAsync(
+            cameraTexture,
+            (base64Image) => {
+                sendImageToBackend(base64Image);
+            },
+            () => {
+                print("❌ Failed to encode image");
+            },
+            CompressionQuality.HighQuality,
+            EncodingType.Jpg
+        );
+    });
 });
 
-function sendFrameToBackend(jpegData) {
-    let request = new remoteModule.Request();
-    request.method = "POST";
-    request.url = script.backendURL;
-    request.setHeader("Content-Type", "image/jpeg");
-    request.body = jpegData;
+async function sendImageToBackend(base64Image) {
+    try {
+        const request = new Request(script.backendUrl, {
+            method: 'POST',
+            body: JSON.stringify({
+                image: base64Image
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
 
-    request.send(function(response) {
-        if (!response || response.statusCode !== 200) {
-            print("❌ Backend request failed");
-            return;
+        const response = await remoteServiceModule.fetch(request);
+
+        if (response.status === 200) {
+            const responseText = await response.text();
+            print('✅ Backend response: ' + responseText);
+
+            if (script.responseText) {
+                const trimmed = responseText.trim();
+                
+                // Only update text if we detect a real emotion
+                if (trimmed && trimmed.toLowerCase() !== "none") {
+                    lastDetectedEmotion = trimmed; // Store the emotion
+                    script.responseText.text = trimmed;
+                    script.responseText.enabled = true; // Ensure it's visible
+                } else if (lastDetectedEmotion) {
+                    // Keep showing the last detected emotion
+                    script.responseText.text = lastDetectedEmotion;
+                    script.responseText.enabled = true;
+                }
+            }
+        } else {
+            const errorText = await response.text();
+            print('❌ Backend error: ' + errorText);
+            
+            // On error, keep showing last emotion if we have one
+            if (script.responseText && lastDetectedEmotion) {
+                script.responseText.text = lastDetectedEmotion;
+                script.responseText.enabled = true;
+            }
         }
-
-        print("✅ Emotion received: " + response.body);
-        updateEmotionText(response.body);
-    });
+    } catch (error) {
+        print('❌ Network error: ' + error);
+        
+        // On error, keep showing last emotion if we have one
+        if (script.responseText && lastDetectedEmotion) {
+            script.responseText.text = lastDetectedEmotion;
+            script.responseText.enabled = true;
+        }
+    }
 }
