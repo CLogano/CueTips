@@ -1,4 +1,4 @@
-require("dotenv").config({ path: "../.env" });
+require("dotenv").config({ path: "../../.env" });
 const axios = require("axios");
 const fs = require("fs");
 const { createCanvas, loadImage } = require("canvas");
@@ -26,7 +26,7 @@ async function getEmotionFromImage(base64Image) {
             },
             {
               type: "text",
-              text: "Describe this face in **one word**: happy, sad, angry, surprised, etc.",
+              text: "Describe this person's facial emotion using an emoji followed by one word (e.g., 😁 happy).",
             },
           ],
         },
