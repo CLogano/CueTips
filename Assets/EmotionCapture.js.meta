@@ -28,6 +28,7 @@
   ScriptInputsHidden:
     backendUrl: false
     interval: false
+    openAIKey: false
     responseText: false
   ScriptTypesHidden:
     {}

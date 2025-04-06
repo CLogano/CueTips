@@ -1,0 +1,46 @@
+- !<AssetImportMetadata/870fb821-b802-4617-b66b-c916a31b002c>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 5ba280e1-ea24-492f-85de-17ef237cc1ef
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 5ba280e1-ea24-492f-85de-17ef237cc1ef
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 8d1f7f49-2d11-419c-9cb5-2ffbe2bdaaeb
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/8d1f7f49-2d11-419c-9cb5-2ffbe2bdaaeb>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: c3a2ac9a-024f-4a5a-89a3-e5bef04bbc2c
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    liveAssistButton: false
+    liveAssistMode: false
+    mainMenu: false
+    practiceButton: false
+    practiceMode: false
+  ScriptTypesHidden:
+    {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - mainMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      practiceMode: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      liveAssistMode: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      practiceButton: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      liveAssistButton: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      transitionDelay: 0.200000
+  ScriptTypes:
+    -
+      {}
