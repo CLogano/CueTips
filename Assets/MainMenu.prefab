@@ -108,7 +108,7 @@
   PrefabRemaps:
     []
   Name: MainMenu
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -118,6 +118,7 @@
   Children:
     - !<own> aae10762-4c52-4e48-8912-7e2131f8ea56
     - !<own> 6d57bb72-034c-4457-9e91-9229e98b6813
+    - !<own> cca4a3eb-724d-412b-96f0-f6d5a17f2222
   Components:
     - !<own> 5cc89a99-caa4-46c8-aaeb-9fa63c6f9fef
     - !<own> 010d91a6-00ab-4ad5-8042-19414b2b763e
@@ -615,6 +616,25 @@
   ScriptTypes:
     "":
       {}
+- !<Image/c3eee35e-4def-40a2-a2ef-6cfc645aacf4>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Fit
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 58c5662c-42f3-4c07-816e-bce0a7499875
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<Text/c5239777-9c9a-4aa2-aa54-1f8ce1d5c19e>
   PrefabRemaps:
     []
@@ -691,6 +711,21 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
+- !<SceneObject/cca4a3eb-724d-412b-96f0-f6d5a17f2222>
+  PrefabRemaps:
+    []
+  Name: Logo
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 4.000000, z: -50.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c3eee35e-4def-40a2-a2ef-6cfc645aacf4
 - !<ColliderComponent/d522e1c8-c5a0-41da-8d7d-9a3baae839b0>
   PrefabRemaps:
     []
