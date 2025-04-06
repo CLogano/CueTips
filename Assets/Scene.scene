@@ -231,6 +231,7 @@
     - 010e0778-c681-4a03-a234-1d5823df616c: b1c70b7a-25f0-43de-9d6b-ee6a7468141c
     - 0261ed9e-19f7-43f8-b8b7-aba958b05fc1: 2b4503c7-ddac-4c20-b50d-97358f9deb43
     - 1d9c0d0a-3372-48c5-80f3-76028614f128: 90f52781-84cb-4d5e-a2ab-d879ed4d9cc1
+    - 3279d24d-b537-4ead-bb4a-fa3538320353: cca4a3eb-724d-412b-96f0-f6d5a17f2222
     - 350703e7-f727-457e-b32b-39b452ab6287: 9433ad55-2a16-4ae2-a89b-1af901d3d1b2
     - 405377fc-e0f1-471c-a8fd-b28f4210d874: d522e1c8-c5a0-41da-8d7d-9a3baae839b0
     - 47775a66-2a9c-4259-b7f3-90e0984453b0: 336305a9-037b-46a6-bfe3-46722196d18b
@@ -238,10 +239,12 @@
     - 4c9b1886-0fcc-4bcd-ac1a-6fd7067b8afb: 5cc89a99-caa4-46c8-aaeb-9fa63c6f9fef
     - 539f5ff3-950a-489b-9c73-54e5cf9b9403: a0e1884b-d09b-4d89-960e-8fe96c52eeed
     - 55d1998d-34a0-4751-821b-769cffe6a5a7: 6b2bdd3c-106e-4846-a1be-6f44c3e6d841
+    - 58d5cb23-fe32-45c9-b02c-f8929dfd90d6: c70a2a0b-2ede-4b98-9ffc-d13b08012a0e
     - 6320d820-1aba-4f25-bced-732b9617d2cc: 48502fa2-6e1c-4e63-839f-f01f2eacd555
     - 64879b2c-6dbc-4ac4-9995-6f0658320e8e: ab97abdd-d26f-4f4d-afb6-760b91707556
     - 65cb4a86-37c6-4fe4-8e0a-18e6f2954fed: 810fd07b-9c22-47c3-9ec5-9e6e919f09b6
     - 6a99e3d0-dd85-4fe3-ab32-b344c4548d6d: 88ca911f-4935-44c6-9c8a-387126094f63
+    - 72983b07-3950-4809-8cd3-14a912922f4a: 1d9aea56-9af4-479a-a71d-cbdbedcbf620
     - 7678abbd-ef27-4752-97bf-0a72286dbd53: 0ccd183b-4692-4068-9273-5fafa06d66c0
     - 82f0e358-f7d5-4bb1-bce9-b5521021bb6d: c5239777-9c9a-4aa2-aa54-1f8ce1d5c19e
     - 93344c25-606b-41e5-b324-7768d5372ff1: 78a33662-9b18-49ac-ba3c-c931de986bbe
@@ -251,6 +254,7 @@
     - a1d23b35-ae90-4348-9868-6793b0e25fb7: a2a57b92-3b7e-4056-82a5-cd7ec176b614
     - bca0781a-1270-4803-b0e6-da51ae1bc30d: 1cec8b24-0ba0-4139-a58a-bacc8f51aa3e
     - c6f53eac-d298-413a-be5b-cb582cb6a22c: 0b00f5a8-c903-431b-aafb-cd2d0d48e369
+    - cbaa26c3-d05f-44e9-9e89-5707e0e52f3f: c3eee35e-4def-40a2-a2ef-6cfc645aacf4
     - d33c6332-bbab-40b4-8967-67dd7b9a0d6d: 35bc911c-6fb3-49b3-bf3b-71d93d0fce83
     - d78471cf-f56f-481e-aad0-98a8dbb6a4e8: 594918c5-59bd-4faf-8b09-f33d697174f1
     - de7637de-fe0f-4427-9541-dc04c3a025e0: 010d91a6-00ab-4ad5-8042-19414b2b763e
@@ -272,6 +276,7 @@
   Children:
     - !<own> f7c50eaa-3efd-4054-8eb1-21ce3c5bc264
     - !<own> fecc9897-bc93-45bb-86c1-472b638885f1
+    - !<own> 3279d24d-b537-4ead-bb4a-fa3538320353
   Components:
     - !<own> 4c9b1886-0fcc-4bcd-ac1a-6fd7067b8afb
     - !<own> de7637de-fe0f-4427-9541-dc04c3a025e0
@@ -375,7 +380,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 4.716455, z: 0.000000}
+    position: {x: 0.000000, y: 4.716455, z: -50.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -1057,7 +1062,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -2.794558, z: 0.000000}
+    position: {x: 0.000000, y: -2.794558, z: -50.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -1141,21 +1146,6 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
-- !<SceneObject/24443c4b-6073-4c17-a9a8-2b279931a10f>
-  PrefabRemaps:
-    []
-  Name: Practice
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> f3065d95-3403-485a-8051-e64093b69590
 - !<SceneObject/244669dc-644e-4f9c-bdef-63a9d6ded260>
   PrefabRemaps:
     []
@@ -1474,6 +1464,21 @@
     []
   Components:
     []
+- !<SceneObject/3279d24d-b537-4ead-bb4a-fa3538320353>
+  PrefabRemaps:
+    []
+  Name: Logo
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 4.000000, z: -50.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 58d5cb23-fe32-45c9-b02c-f8929dfd90d6
 - !<SceneObject/340aecfb-f119-46c6-a5d4-6ec61457147f>
   PrefabRemaps:
     []
@@ -1893,7 +1898,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 2.155430, z: 0.000000}
+    position: {x: 0.000000, y: 2.155430, z: -50.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -2308,6 +2313,25 @@
     - !<own> 677776ca-36f8-4701-a3c4-9ff6d3a2a089
   Components:
     []
+- !<Image/58d5cb23-fe32-45c9-b02c-f8929dfd90d6>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Fit
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 0bce9438-f0cb-4371-82bb-4492a03eb61b
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/59175d6b-b4ea-47db-a842-53f03560e157>
   PrefabRemaps:
     []
@@ -3445,7 +3469,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -9.144545, z: 0.000000}
+    position: {x: 0.000000, y: -9.144545, z: -50.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -3558,13 +3582,12 @@
   Enabled: true
   ScriptAsset: !<reference> 8124b490-891c-4192-907a-d01ea0d4d454
   ScriptInputsDefault:
-    interval: true
     openAIKey: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      interval: 2000
+      interval: 500
       backendUrl: "https://d2ba-50-168-180-218.ngrok-free.app/analyze"
       responseText: !<reference.Text> 53893949-b3e6-4dae-b249-5ee1ef93e124
       openAIKey: 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
@@ -3718,7 +3741,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -4.921028, z: 0.000000}
+    position: {x: 0.000000, y: -4.921028, z: -50.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -3949,7 +3972,12 @@
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
-    []
+    - !<own> 08576ea7-5767-4a04-8ac3-c1015d18cf52
+    - !<own> 4a74b4c8-f174-4d34-ad61-c0d9258e6253
+    - !<own> 20f1562f-0e19-4120-9a70-99002b4e6041
+    - !<own> a80a859a-5573-427d-9598-db028db9d92e
+    - !<own> fa1b0b82-18bb-4e89-8fac-c8e0c1a88d02
+    - !<own> 8bd98a26-cf7f-49a8-b7ea-a5d98d8325eb
   Components:
     - !<own> e05d4154-0b92-4031-a3a6-fb3c0774ba0b
 - !<SceneObject/bc50e426-4329-4de7-8769-d7f951650d94>
@@ -4073,7 +4101,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -17.500000, y: 15.000000, z: -60.000000}
+    position: {x: -10.000000, y: 10.000000, z: -60.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.250000, y: 1.250000, z: 1.250000}
     hasSegmentScaleCompensation: false
@@ -4736,27 +4764,20 @@
       {}
 - !<SceneObject/e10a28c9-d891-4752-82b9-d2d933c0d616>
   PrefabRemaps:
-    - 04bad7ef-f306-4375-8dc9-4881759f64bb: c2edf5f6-0b62-4383-af17-7d371d43864b
     - 05d1423c-2f0a-40cf-be73-e14bcdd61f39: b2768606-de64-4c85-b4d3-45e7bb4bba8c
     - 07d42b65-802a-41bc-9d29-b6058610d539: 7687820a-a96c-4fc1-a95e-ed6990812267
-    - 08576ea7-5767-4a04-8ac3-c1015d18cf52: 2f4a3b9e-80c7-4f1c-8d66-e85c94b1bd47
     - 1222b965-47b2-4781-83e6-b59585137309: a4b77824-3d36-4d44-ad31-e6e2f09cd7ed
     - 1d412948-3a53-4527-9050-a26dafc94778: 9346f34b-93f1-4f6b-b973-6294c5d5d9e5
     - 1fb8e3e4-7eb2-4412-8b68-c006baf1a6ea: c75e99dc-adb8-4761-a779-6921dcd3f2e5
     - 2024b7c1-28ee-4d69-aa8d-cf1e7d65ce94: 8f653a4b-71db-4deb-9198-bf77affa6fab
-    - 20f1562f-0e19-4120-9a70-99002b4e6041: 7d92a41a-56df-43fe-98ce-9e6f819d91d8
-    - 224a9d73-313e-4f5a-886d-4067830e2195: 105e0123-5092-435d-9401-d757c83b8393
     - 24443c4b-6073-4c17-a9a8-2b279931a10f: 0e7850bf-a34b-4371-ace9-95e489606f22
     - 2727f838-4142-4275-810f-186a13101ef0: a595d15e-5ad7-4f81-b669-f01858640bb2
-    - 279ee7ea-904c-4f3d-87dd-c32453af1206: af4ad5af-c459-4edf-8657-628d4e68178f
     - 2988f9bb-2f0b-4d0c-bc66-9fb8b69fa182: 52209bea-544f-4ecf-87e0-c7b67754adf4
     - 2d09c947-b783-4867-a68e-fbf7e3a939d5: 268ba5b3-e984-4768-bb02-f1e907cc2631
     - 34c21488-779a-4adf-8396-1363361f797b: b76786fc-e132-44ab-9d6c-31297304fee1
     - 37e81d88-88e1-40bc-a627-6e912f9f1a8d: 4d5ac1e6-70aa-4328-acde-57b35278a233
-    - 382339fe-04d1-4f60-9dac-7e317c4ecc77: f741d14c-2838-4d4d-b41b-4e77416966c5
     - 3a4e426e-f5d6-496a-bd43-858e1984ed23: 59e83410-082d-40df-a069-dbc20bfcd110
     - 3d75eff8-ac77-458e-90c9-07c436cf8356: b788b724-a841-4c8a-8d59-d3cf5e1796e2
-    - 4a74b4c8-f174-4d34-ad61-c0d9258e6253: 22f3b613-1da8-49b2-8576-9056b3c22a45
     - 54596733-cca9-4f40-8287-a6c46157f9e2: e3be2033-d634-4a98-8803-6d994840b3d8
     - 55534cbe-e073-4a6f-bc7f-4afcc6d29338: 0fb1bef0-5deb-466d-b4b1-988ef32a9537
     - 5618068e-e700-4520-a54a-2cdd626eb69e: 2b554f07-3847-4282-ac1c-1be185e9e9ac
@@ -4768,23 +4789,18 @@
     - 7f425641-3f83-493d-84fd-ea3a4431199b: 681ddea0-3c74-483c-8adc-b6f7f443393a
     - 7fd682da-19df-4045-a81a-0767388d385a: d9ae5090-1045-4f64-91aa-97d7142aac39
     - 8b0e821d-765d-486f-9c3c-c5298b8642a9: a711c310-b841-47bd-b105-8e8a4c3cb5ab
-    - 8bd98a26-cf7f-49a8-b7ea-a5d98d8325eb: 8a8b2eaf-6ef4-496e-a4c9-4dcac6572b9b
     - 9d4c2ae7-6726-49c7-b6f7-b3c84c760ad6: 20a03138-bdab-485e-9632-41d2094cd5d9
-    - a80a859a-5573-427d-9598-db028db9d92e: a337fb7f-5eeb-4ceb-a500-91f24f61ec36
     - ab277bd5-1af6-4f85-8dc5-0eee4a09b3c7: 674a5b53-12b4-425c-a7d2-5c8b01329952
     - ab2a2fed-f542-4a9a-8212-040d9ed1902d: 94e428d0-3d76-4652-98b9-c6486cff6e06
     - b3e4b6d6-74d8-45b8-89fd-e749b3412d83: 4027871e-cc81-43fd-af56-3f01fc146584
     - c2a183f2-6e06-4c44-a80a-662cbfa6bfb1: 3c5ecc47-a2c9-4ce1-a21c-8b2d025746cd
-    - d925841d-57a4-4368-b381-47162f87f73c: 81ef851e-040f-46dd-ab78-a5470d2e78cd
     - df9a0dc1-2264-44b3-b003-47b1750405df: 5e20babc-c891-44d9-94fd-d38546ab83de
     - e003f0b0-1541-4ec6-b72e-cea234135284: f938fe86-e5e7-4449-863c-82e78f985c31
     - e10a28c9-d891-4752-82b9-d2d933c0d616: cbd094b8-1c30-483a-9116-2a0968577014
     - e94a47d3-f62f-4ce7-99b6-328989496fc6: e86ea8a6-eedf-4792-9602-c8ac5f3f31b9
-    - eb2ed7b8-556a-4d26-9711-7ad47ae1abe1: 88710be9-ff51-4609-b596-5f4c1c55ff4a
     - ebdc4dd1-b0e6-4d0f-8524-4b2733cd3504: 69790ec3-bf59-4be7-8b55-25debf05096b
     - f064c63e-a5d6-4218-974d-575e1ecddd4c: 2347b3eb-6f5a-401e-b6d3-b45b737c3d46
     - f3065d95-3403-485a-8051-e64093b69590: ae194e64-2789-49e4-be68-ead9fa6bcb48
-    - fa1b0b82-18bb-4e89-8fac-c8e0c1a88d02: 85d679b3-fd80-461d-b84b-c9e10e70d5aa
     - fc2c44cd-5b00-4d67-a111-b914775686da: a6f0bc1a-e07b-482a-9634-9a51eefda1ca
   Name: PracticeMode
   Enabled: false
@@ -4796,13 +4812,6 @@
     hasSegmentScaleCompensation: false
   Children:
     - !<own> ebdc4dd1-b0e6-4d0f-8524-4b2733cd3504
-    - !<own> 24443c4b-6073-4c17-a9a8-2b279931a10f
-    - !<own> 08576ea7-5767-4a04-8ac3-c1015d18cf52
-    - !<own> 4a74b4c8-f174-4d34-ad61-c0d9258e6253
-    - !<own> 20f1562f-0e19-4120-9a70-99002b4e6041
-    - !<own> a80a859a-5573-427d-9598-db028db9d92e
-    - !<own> fa1b0b82-18bb-4e89-8fac-c8e0c1a88d02
-    - !<own> 8bd98a26-cf7f-49a8-b7ea-a5d98d8325eb
   Components:
     - !<own> 55534cbe-e073-4a6f-bc7f-4afcc6d29338
     - !<own> 2d09c947-b783-4867-a68e-fbf7e3a939d5
@@ -4974,7 +4983,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -17.500000, y: 15.000000, z: -60.000000}
+    position: {x: -10.000000, y: 10.000000, z: -60.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.250000, y: 1.250000, z: 1.250000}
     hasSegmentScaleCompensation: false
@@ -5119,28 +5128,6 @@
     - !<own> 356e1f1b-8a5f-4dcd-a9eb-5de72f44b857
   Components:
     []
-- !<ScriptComponent/f3065d95-3403-485a-8051-e64093b69590>
-  PrefabRemaps:
-    []
-  Name: Practice
-  Enabled: true
-  ScriptAsset: !<reference> 78316db5-4f38-4214-8e69-05b252589b79
-  ScriptInputsDefault:
-    optionsContainer: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      text: !<reference.Text> 382339fe-04d1-4f60-9dac-7e317c4ecc77
-      option1: !<reference.Text> eb2ed7b8-556a-4d26-9711-7ad47ae1abe1
-      option2: !<reference.Text> 279ee7ea-904c-4f3d-87dd-c32453af1206
-      option3: !<reference.Text> d925841d-57a4-4368-b381-47162f87f73c
-      option4: !<reference.Text> 224a9d73-313e-4f5a-886d-4067830e2195
-      titleText: !<reference.Text> 04bad7ef-f306-4375-8dc9-4881759f64bb
-      optionsContainer: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/f360c068-2542-4a1e-bf71-de4d8fbac79f>
   PrefabRemaps:
     []
@@ -5291,7 +5278,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -7.016813, z: 0.000000}
+    position: {x: 0.000000, y: -7.016813, z: -50.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
